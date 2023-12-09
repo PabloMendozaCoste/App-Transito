@@ -1,0 +1,7 @@
+{
+  "name": "app-transito",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
