@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./vehiculos/vehiculos.module').then( m => m.VehiculosPageModule)
   },
   {
-    path: 'licencia',
-    loadChildren: () => import('./licencia/licencia.module').then( m => m.LicenciaPageModule)
-  },
-  {
     path: 'form-multa',
     loadChildren: () => import('./form-multa/form-multa.module').then( m => m.FormMultaPageModule)
   },
@@ -46,6 +42,10 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'conductores',
+    loadChildren: () => import('./conductores/conductores.module').then( m => m.ConductoresPageModule)
   }
 ];
 

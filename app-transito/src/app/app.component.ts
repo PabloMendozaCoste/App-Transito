@@ -8,7 +8,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Tarifas', url: './tarifas', icon: 'receipt' },
     { title: 'Consulta de vehículo', url: './vehiculos', icon: 'reader' },
-    { title: 'Consulta de conductor', url: './licencia', icon: 'reader' },
+    { title: 'Consulta de conductor', url: './conductores', icon: 'reader' },
     { title: 'Formulario Multa', url: './form-multa', icon: 'clipboard' },
     { title: 'Multas registradas', url: './multas', icon: 'reader' },
     { title: 'Mapa de multas', url: './mapa', icon: 'map' },

@@ -1,0 +1,40 @@
+/* noticias.page.scss */
+
+/* Modify the list to display horizontally */
+ion-list {
+    display: flex;
+    flex-wrap: wrap;
+   }
+   
+   /* Modify the list items to display in a card-like manner */
+   ion-item {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+   }
+   
+   /* Adjust the padding inside the list items */
+   ion-thumbnail, ion-label {
+    padding: 35px;
+   }
+
+
+   
+   /* Adjust the appearance of the noticia title */
+   h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: azure;
+   }
+   
+   /* Adjust the appearance of the noticia excerpt */
+   p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: azure;
+   }

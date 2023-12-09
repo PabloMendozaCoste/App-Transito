@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LicenciaPageRoutingModule } from './licencia-routing.module';
+import { ConductoresPageRoutingModule } from './conductores-routing.module';
 
-import { LicenciaPage } from './licencia.page';
+import { ConductoresPage } from './conductores.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LicenciaPageRoutingModule
+    ConductoresPageRoutingModule
   ],
-  declarations: [LicenciaPage]
+  declarations: [ConductoresPage]
 })
-export class LicenciaPageModule {}
+export class ConductoresPageModule {}

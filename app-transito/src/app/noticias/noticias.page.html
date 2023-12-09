@@ -1,13 +1,24 @@
-<ion-header [translucent]="true">
+<!-- noticias.page.html -->
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>noticias</ion-title>
+    <ion-title>
+      Noticias
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">noticias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let noticia of noticias">
+      <ion-thumbnail slot="start">
+        <img [src]="noticia?.jetpack_featured_media_url" alt="Imagen de la noticia">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ noticia?.title?.rendered }}</h2>
+        <p [innerHTML]="noticia?.excerpt?.rendered"></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+

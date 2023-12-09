@@ -1,0 +1,25 @@
+ion-content {
+ // Color de fondo de la página
+  
+    ion-list {
+      ion-item {
+        ion-label {
+          color: azure; // Color del texto en las etiquetas del formulario
+        }
+      }
+    }
+  
+    ion-button {
+      margin-top: 20px; // Margen superior para separar el botón del formulario
+      --background: #007bff; // Color de fondo del botón
+   
+    }
+  
+    div {
+      margin-top: 20px; // Margen superior para separar los resultados del formulario
+      h2 {
+        color: azure; // Color del texto de los resultados
+      }
+    }
+  }
+  

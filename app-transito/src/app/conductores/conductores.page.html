@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>conductores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="Conductores.length > 0">
+    <ion-item *ngFor="let conductores of Conductores">
+      <ion-label>{{ conductores.licencia  }}</ion-label>
+      <ion-label>{{ conductores.nombre  }}</ion-label>
+      <ion-label>{{ conductores.fecha_nacimiento}}</ion-label>
+      <ion-label>{{ conductores.direccion }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-note *ngIf="Conductores.length === 0" color="medium">
+    No hay conductores registradas.
+  </ion-note>
+</ion-content>
