@@ -11,7 +11,7 @@ export class ApiService {
     this.headers = new HttpHeaders();
     this.headers.append('Accept', 'application/json');  // Corrected spelling
     this.headers.append('Content-Type', 'application/json');  // Corrected spelling
-    this.headers.append('Access-Control-Allow-Origin', '*');
+    this.headers.append('Access-Control-Allow-Origin', 'POST, GET, DELETE, PUT, PATCH, OPTIONS');
   }
 
 

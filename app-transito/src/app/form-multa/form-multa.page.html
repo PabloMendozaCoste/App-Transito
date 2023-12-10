@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="addMultas()">
+ 
     <ion-list>
       <ion-item>
         <ion-label position="floating">Cédula del Infractor</ion-label>
@@ -15,7 +15,7 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Placa del Vehículo</ion-label>
-        <ion-input type="text" [(ngModel)]="placa_vehiculo" name="placa_vehiculo" required></ion-input>
+        <ion-input type="text" [(ngModel)]="placa_vehiculo" name="placa_vehiculo" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Motivo de la Multa</ion-label>
@@ -23,7 +23,7 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Foto de Evidencia</ion-label>
-        <ion-input type="text" [(ngModel)]="foto_evidencia" name="foto_evidencia" required></ion-input>
+        <ion-input type="text" [(ngModel)]="foto_evidencia" name="foto_evidencia" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Comentario</ion-label>
@@ -31,7 +31,7 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Nota de Voz</ion-label>
-        <ion-input type="text" [(ngModel)]="nota_voz" name="nota_voz" required></ion-input>
+        <ion-input type="text" [(ngModel)]="nota_voz" name="nota_voz" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Latitud</ion-label>
@@ -42,15 +42,18 @@
         <ion-input type="number" [(ngModel)]="longitud" name="longitud" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Fecha</ion-label>
-        <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="fecha" name="fecha" required></ion-datetime>
+        <ion-label position="floating">Fecha y Hora</ion-label>
+        <ion-input  [(ngModel)]="fecha" type="date" ></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Hora</ion-label>
-        <ion-datetime displayFormat="HH:mm" [(ngModel)]="hora" name="hora" required></ion-datetime>
-      </ion-item>
-    </ion-list>
 
-    <ion-button expand="full" type="submit">Guardar Multa</ion-button>
-  </form>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" (click)="addMultas()" color="primary" shape="full" expand="block">
+          Guardar Multa
+        </ion-button>
+      </ion-col>
+    </ion-row>
+   
+ 
 </ion-content>

@@ -13,7 +13,6 @@ interface Multas {
   latitud: number;
   longitud: number;
   fecha: Date;
-  hora: Date;
 }
 
 @Component({

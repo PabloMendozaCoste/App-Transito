@@ -17,8 +17,8 @@ export class FormMultaPage {
   nota_voz: string="";
   latitud: number=0;
   longitud: number=0;
-  fecha: Date = new Date();
-  hora: Date = new Date();
+  fecha: string="";
+  
 
   constructor(public _apiService: ApiService) { }
 
@@ -34,15 +34,16 @@ export class FormMultaPage {
       latitud: this.latitud,
       longitud: this.longitud,
       fecha: this.fecha,
-      hora: this.hora
     };
 
-    this._apiService.addMultas(data).subscribe((res:any) => {
-      console.log("SUCCESS:",res);
-    },(error:any) => {
-      console.log("Error:",error);
-    })
-
+    
+    this._apiService.addMultas(data).subscribe(
+      (res: any) => {
+        console.log("SUCCESS:", res);
+      },
+      (error: any) => {
+        console.log("Error:", error);
+      }
+    );
   }
-
 }
