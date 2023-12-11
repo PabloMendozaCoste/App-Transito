@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Clima
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Latitud</ion-label>
+      <ion-input type="number" [(ngModel)]="latitud" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Longitud</ion-label>
+      <ion-input type="number" [(ngModel)]="longitud" required></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="consultarClima()">Consultar Clima</ion-button>
+
+  <div *ngIf="climaData">
+    <h2>Temperatura Actual: {{ climaData.main.temp }}°C</h2>
+    <!-- Puedes mostrar más detalles del clima según tus necesidades -->
+  </div>
+</ion-content>

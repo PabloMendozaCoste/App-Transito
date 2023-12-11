@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>vehiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="Vehiculos.length > 0">
+    <ion-item *ngFor="let vehiculos of Vehiculos">
+      <ion-label>{{ vehiculos.placa  }}</ion-label>
+      <ion-label>{{ vehiculos.marca}}</ion-label>
+      <ion-label>{{ vehiculos.modelo }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-note *ngIf="Vehiculos.length === 0" color="medium">
+    No hay Vehiculos registradas.
+  </ion-note>
+</ion-content>

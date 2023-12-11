@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tarifas de multas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="Tarifas.length > 0">
+    <ion-item *ngFor="let tarifas of Tarifas">     
+      <ion-label>{{ tarifas.tipo  }}</ion-label>
+      <ion-label>RD$ {{ tarifas.monto}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-note *ngIf="Tarifas.length === 0" color="medium">
+    No hay Tarifas registradas.
+  </ion-note>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>multas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="Multas.length > 0">
+    <ion-item *ngFor="let multas of Multas">
+      <ion-label>{{ multas.cedula_infractor  }}</ion-label>
+      <ion-label>{{ multas.placa_vehiculo  }}</ion-label>
+      <ion-label>{{ multas.motivo_multa}}</ion-label>
+      <ion-label>{{ multas.fecha }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-note *ngIf="Multas.length === 0" color="medium">
+    No hay multas registradas.
+  </ion-note>
+</ion-content>

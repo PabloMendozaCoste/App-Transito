@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Formulario de Multas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Cédula del Infractor</ion-label>
+        <ion-input type="number" [(ngModel)]="cedula_infractor" name="cedula_infractor" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Placa del Vehículo</ion-label>
+        <ion-input type="text" [(ngModel)]="placa_vehiculo" name="placa_vehiculo" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Motivo de la Multa</ion-label>
+        <ion-input type="text" [(ngModel)]="motivo_multa" name="motivo_multa" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Foto de Evidencia</ion-label>
+        <ion-input type="text" [(ngModel)]="foto_evidencia" name="foto_evidencia" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Comentario</ion-label>
+        <ion-textarea [(ngModel)]="comentario" name="comentario" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nota de Voz</ion-label>
+        <ion-input type="text" [(ngModel)]="nota_voz" name="nota_voz" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Latitud</ion-label>
+        <ion-input type="number" [(ngModel)]="latitud" name="latitud" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Longitud</ion-label>
+        <ion-input type="number" [(ngModel)]="longitud" name="longitud" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha y Hora</ion-label>
+        <ion-input  [(ngModel)]="fecha" type="date" ></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" (click)="addMultas()" color="primary" shape="full" expand="block">
+          Guardar Multa
+        </ion-button>
+      </ion-col>
+    </ion-row>
+   
+ 
+</ion-content>
