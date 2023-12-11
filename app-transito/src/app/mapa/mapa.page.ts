@@ -35,14 +35,14 @@ export class MapaPage implements OnInit {
     this.ApiService.getMultas().subscribe((data: any) => {
       this.Multas = data as Multas[];
       this.loadMap();
-      this.addMarkers();
+  
     });
   }
 
   loadMap() {
     this.map = L.map('map').setView([19.4517, -70.69703], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
+
     }).addTo(this.map);
   }
 
@@ -58,3 +58,5 @@ export class MapaPage implements OnInit {
     });
   }
 }
+
+

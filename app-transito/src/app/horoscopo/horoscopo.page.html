@@ -1,13 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>horoscopo</ion-title>
+    <ion-title>
+      Horóscopo
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">horoscopo</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Ingresa tu signo zodiacal</ion-label>
+      <ion-input type="text" [(ngModel)]="signoUsuario"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="obtenerHoroscopo()">Obtener Horóscopo</ion-button>
+
+  <div *ngIf="horoscopoUsuario">
+    <h2>Horóscopo:</h2>
+    <p>{{ horoscopoUsuario }}</p>
+  </div>
 </ion-content>
+
